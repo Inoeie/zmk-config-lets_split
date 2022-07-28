@@ -11,30 +11,24 @@
 #include <dt-bindings/zmk/bt.h>
 
 //Layer definitions
-#define QWERTY 0
-#define VIKEYS 1 
+#define DEF 0
+#define LOWER 1 
 
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty {
-//  --------------------------------------------------------   -------------------------------------------------------------------------
-// | TAB               | Q     | W    | E    | R     | T    | | Y     | U     | I           | O           | P          | BSPC           |
-// | LCTRL / ESC       | A     | S    | D    | F     | G    | | H     | J     | K           | L           | VIKEYS / ; | '              |
-// | LSHFT             | Z     | X    | C    | V     | B    | | N     | M     | ,           | .           | /          | RSHIFT / ENTER |
-// | LCTRL+LSHFT+LGUI  | LCTRL | LALT | LGUI | LOWER | BSPC | | SPACE | RAISE | RGUI / LEFT | RALT / DOWN | RCTRL / UP | RIGHT          |
-//  --------------------------------------------------------   -------------------------------------------------------------------------
+        DEF {
             bindings = <
-    &kp TAB           &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I            &kp O            &kp P              &kp BSPC  
-    &mt LCTRL ESC     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K            &kp L            &lt VIKEYS SEMI    &kp SQT   
-    &kp LSHFT         &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA        &kp DOT          &kp FSLH           &mt RSHIFT ENTER 
-    &none  &none &none &none &none &none &none &none &none &none &none &none
+    &kp KP_SLASH  &kp KP_N7      &kp KP_N8       &kp KP_N9       &kp KP_NUM      &kp T              &none &none &none &none &none &none
+    &mt KP_MULTIPLY &kp KP_N4    &kp KP_N5       &kp KP_N6       &kp PG_UP       &kp G              &none &none &none &none &none &none
+    &kp KP_MINUS &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp PG_DN       &kp B              &none &none &none &none &none &none
+    &kp KP_PLUS  &kp KP_N0       &kp KP_DOT      &kp KP_ENTER   &kp KP_EQUAL     &tog LOWER              &none &none &none &none &none &none
             >;
         };
 
-       vikeys {
+       LOWER {
 //  -----------------------------------     ---------------------------------------
 // |     |     |     |     |     |     |   |      |      |     |       |     |     |
 // |     |     |     |     |     |     |   | LEFT | DOWN | UP  | RIGHT |     |     |

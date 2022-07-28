@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 //Layer definitions
-#define DEF 0
+#define DEFAULT 0
 #define LOWER 1 
 
 
@@ -19,7 +19,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DEF {
+        default_layer {
             bindings = <
     &kp KP_SLASH  &kp KP_N7      &kp KP_N8       &kp KP_N9       &kp KP_NUM      &kp T              &none &none &none &none &none &none
     &mt KP_MULTIPLY &kp KP_N4    &kp KP_N5       &kp KP_N6       &kp PG_UP       &kp G              &none &none &none &none &none &none
@@ -28,7 +28,7 @@
             >;
         };
 
-       LOWER {
+       lower_layer {
 //  -----------------------------------     ---------------------------------------
 // |     |     |     |     |     |     |   |      |      |     |       |     |     |
 // |     |     |     |     |     |     |   | LEFT | DOWN | UP  | RIGHT |     |     |

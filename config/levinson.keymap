@@ -16,15 +16,25 @@
 
 
 / {
+    behaviors {
+		mo_tog: behavior_mo_tog {
+			compatible = "zmk,behavior-tap-dance";
+			label = "mo_tog";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&mo 1>, <&tog 1>;
+		};
+    };
+     
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-    &kp KP_SLASH  &kp KP_N7      &kp KP_N8       &kp KP_N9       &kp KP_NUM      &kp T              &none &none &none &none &none &none
+    &kp KP_SLASH  &kp KP_N7      &kp KP_N8       &kp KP_N9       &kp BSPC      &kp T              &none &none &none &none &none &none
     &kp KP_MULTIPLY &kp KP_N4    &kp KP_N5       &kp KP_N6       &kp PG_UP       &kp G              &none &none &none &none &none &none
     &kp KP_MINUS &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp PG_DN       &kp B              &none &none &none &none &none &none
-    &kp KP_PLUS  &kp KP_N0       &kp KP_DOT      &kp KP_ENTER   &kp KP_EQUAL     &tog LOWER              &none &none &none &none &none &none
+    &kp KP_PLUS  &kp KP_N0       &kp KP_DOT      &kp KP_ENTER   &kp KP_EQUAL     &mo_tog              &none &none &none &none &none &none
             >;
         };
 
@@ -36,7 +46,7 @@
 // |     |     |     |     |     |     |   |      |      |     |       |     |     |
 //  -----------------------------------     ---------------------------------------
             bindings = <
-    &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
+    &trans  &trans  &trans  &trans  &kp DEL  &trans    &trans    &trans    &trans  &trans     &trans  &trans
     &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
     &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
     &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans

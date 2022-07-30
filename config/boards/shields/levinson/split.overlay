@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "levinson.dtsi"
+#include "split.dtsi"
 
 / {
     kscan0: kscan {

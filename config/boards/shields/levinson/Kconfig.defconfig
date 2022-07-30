@@ -2,29 +2,8 @@
 # SPDX-License-Identifier: MIT
  
  
-if SHIELD_LEVINSON_LEFT
-
 config ZMK_KEYBOARD_NAME
-	default "Levinson Left"
+	default "Split Numpad"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
-endif
-
-if SHIELD_LEVINSON_RIGHT
-
-config ZMK_KEYBOARD_NAME
-	default "Levinson Right"
-
-config ZMK_USB
-	default y
-
-endif
-
-if SHIELD_LEVINSON_LEFT || SHIELD_LEVINSON_RIGHT
-
-config ZMK_SPLIT
-	default y
-
-endif
+	default n

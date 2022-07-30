@@ -1,9 +1,7 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
  
- 
+if split
 config ZMK_KEYBOARD_NAME
 	default "Split Numpad"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default n
+endif
